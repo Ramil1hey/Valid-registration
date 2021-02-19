@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: Arial;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    max-width: 400px;
+    min-width: 400px;
+    height: 550px;
+    box-shadow: 2px 2px 10px #777777;
+    padding: 5px 10px;
+}
+
+.form__container .form__body p {
+    padding: 10px;
+    margin: 10px 10px 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.form__container .form__body label {
+    display: block;
+    margin-bottom: 3px;
+    color: #777777;
+    padding: 3px;
+    font-weight: lighter;
+}
+
+.form__container .form__body input {
+    display: block;
+    padding: 10px;
+    flex: 0 0 320px;
+    width: 315px;
+    font-size: 15px;
+    border: 1px solid #e9e7e7;
+    outline: none;
+    border-radius: 3px;
+    margin-bottom: 2px;
+}
+
+.inputActive {
+    border-radius: 2px solid rgb(118, 118, 118);
+}
+.inputValid {
+    border: 2px solid green;
+}
+
+.form__body {
+    flex: 1 1 auto;
+}
+
+.form__container button {
+    flex: 1 1 auto;
+    width: 315px;
+    max-height: 42px;
+    margin-bottom: 23px;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 550px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: all .050s;
+}
+.form__container button:hover {
+    background-color: #256d9c;
+}
+
+.errorName, .errorEmail, .errorPassword1, .errorPassword2 {
+    position: relative;
+    color: rgb(236, 121, 109);
+    font-size: 14px;
+    left: 1px;
+    bottom: 0;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+.errorPassword2 {
+    margin-bottom: 0;
+}
+.errorName span, .errorEmail span, .errorPassword1 span, .errorPassword2 span {
+   color: red;
+}
